@@ -1,7 +1,8 @@
-from django.urls import path, re_path
-from .views import FrontendAppView
+from django.urls import path
+from .views import hello_world
 
 urlpatterns = [
-    re_path(r'^.*$', FrontendAppView.as_view(), name='frontend')
+    path('hello/', hello_world, name='hello-world'),
 ]
+
 

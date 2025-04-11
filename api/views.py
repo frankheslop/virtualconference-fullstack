@@ -3,7 +3,8 @@ from rest_framework.response import Response
 from rest_framework.decorators import api_view
 from django.views.generic import TemplateView
 
-class FrontendAppView(TemplateView):
-    template_name = 'index.html'
+@api_view(['GET'])
+def hello_world(request):
+    return Response({"message": "Hello, world!"})
 
 # Create your views here.
